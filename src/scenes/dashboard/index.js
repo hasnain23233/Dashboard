@@ -40,95 +40,101 @@ const Dashboard = () => {
       </Box>
 
       {/* GRID & CHARTS */}
+        <Box
+          display="grid"
+          gridAutoRows="140px"
+          gap="20px"
+          className = "upperSection"
+        >
+              {/* ROW 1 */}
+            <Box
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              borderRadius={'12px'}
+              justifyContent="center" 
+            >
+              <StatBox
+                title="12,361"
+                subtitle="Emails Sent"
+                progress="0.75"
+                increase="+14%"
+                icon={
+                  <EmailIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+            <Box
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              borderRadius={'12px'}
+              justifyContent="center"
+            >
+              <StatBox
+                title="431,225"
+                subtitle="Sales Obtained"
+                progress="0.50"
+                increase="+21%"
+                icon={
+                  <PointOfSaleIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+            <Box
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              borderRadius={'12px'}
+            >
+              <StatBox
+                title="32,441"
+                subtitle="New Clients"
+                progress="0.30"
+                increase="+5%"
+                icon={
+                  <PersonAddIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+            <Box
+              gridColumn="span 3"
+              backgroundColor={colors.primary[400]}
+              display="flex"
+              alignItems="center"
+              borderRadius={'12px'}
+              justifyContent="center"
+              >
+              <StatBox
+                title="1,325,134"
+                subtitle="Traffic Received"
+                progress="0.80"
+                increase="+43%"
+                icon={
+                  <TrafficIcon
+                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  />
+                }
+              />
+            </Box>
+        </Box>
+        {/* ROW 2 */}
       <Box
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
+        marginTop='20px'
         gridAutoRows="140px"
         gap="20px"
+        className = "boxes"
       >
-        {/* ROW 1 */}
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          borderRadius={'12px'}
-          justifyContent="center" 
-        >
-          <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
-            progress="0.75"
-            increase="+14%"
-            icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box>
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          borderRadius={'12px'}
-          justifyContent="center"
-        >
-          <StatBox
-            title="431,225"
-            subtitle="Sales Obtained"
-            progress="0.50"
-            increase="+21%"
-            icon={
-              <PointOfSaleIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box>
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          borderRadius={'12px'}
-        >
-          <StatBox
-            title="32,441"
-            subtitle="New Clients"
-            progress="0.30"
-            increase="+5%"
-            icon={
-              <PersonAddIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box>
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          borderRadius={'12px'}
-          justifyContent="center"
-        >
-          <StatBox
-            title="1,325,134"
-            subtitle="Traffic Received"
-            progress="0.80"
-            increase="+43%"
-            icon={
-              <TrafficIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box>
-
-        {/* ROW 2 */}
         <Box
           gridColumn="span 8"
           gridRow="span 2"
@@ -171,10 +177,10 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           overflow="auto"
+          className= "data"
         >
           <Box
             display="flex"
@@ -220,13 +226,14 @@ const Dashboard = () => {
             </Box>
           ))}
         </Box>
-
+      </Box>
+      <Box className='lowerSection'>
         {/* ROW 3 */}
         <Box
-          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
+          className='lastBoce'
         >
           <Typography variant="h5" fontWeight="600">
             Campaign
@@ -249,9 +256,9 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          className='lastBoce'
         >
           <Typography
             variant="h5"
@@ -268,6 +275,7 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          className='lastBoce'
           padding="30px"
         >
           <Typography
